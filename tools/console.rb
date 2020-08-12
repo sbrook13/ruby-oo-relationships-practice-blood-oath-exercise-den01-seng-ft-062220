@@ -17,6 +17,7 @@ dick = Follower.new("Dick", 36, "I need a sign!")
 mike = Follower.new("Mike", 18, "I'm impressionable!")
 
 z = BloodOath.new(chris, a, "2017")
+y = BloodOath.new(chris, d, "2000")
 ab = BloodOath.new(mike, b,"2014")
 chris.join_cult(b, "2020")
 dick.join_cult(b, "2011")

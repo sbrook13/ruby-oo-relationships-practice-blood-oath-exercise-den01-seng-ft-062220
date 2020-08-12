@@ -26,11 +26,23 @@ class Follower
     def join_cult cult, initiation_date
         BloodOath.new self, cult, initiation_date
     end 
+
+    def my_cults_slogans
+        cults.each do |cult|
+            puts cult.slogan
+        end    
+    end 
     
     def self.of_a_certain_age age
-        self.all.select do |follower|
-            follower.age >= age
+        all.select do |person|
+            person.age >= age
         end
-    end        
+    end
+    
+    def self.most_active
+        all.max_by do |follower|
+            follower.cults.count
+        end
+    end 
 
 end
